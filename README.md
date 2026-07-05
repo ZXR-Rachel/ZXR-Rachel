@@ -2,7 +2,7 @@
 
 ### 👩‍🎓 About Me
 
-I am a **M.S student** in Mechanical Engineering at **Tsinghua University**. 
+I am a **M.S student** in Mechanical Engineering at **Tsinghua University**.
 
 ### 🔬 Research Interests
 
@@ -12,8 +12,8 @@ I am a **M.S student** in Mechanical Engineering at **Tsinghua University**.
 
 ### 🎓 Education Background
 
-- **Tsinghua University** | M.S. in Mechanical Engineering | *GPA: 4.0/4.0 (Rank: 1)*
-- **Hunan University** | B.S. in Automotive Engineering | *GPA: 3.91/4.0 (Rank: 1/124) |*
+- **Tsinghua University** | M.S. in Mechanical Engineering | *GPA: 4.0/4.0 (Rank: 1/74)*
+- **Hunan University** | B.S. in Vehicle Engineering | *GPA: 3.91/4.0 (Rank: 1/124) |*
 - *Honors: National Scholarship for consecutive years.*
 
 ### 🎓 Selected Projects
@@ -26,11 +26,9 @@ A vision-language-model-based framework for cross-domain bearing fault diagnosis
 - Uses STFT images and QA-style fine-tuning
 - Includes auxiliary classification and contrastive learning modules
 
-
 ### 🎓 Publications
 
 - Manuscripts under preparation / under review
-
 
 ### 📰 Recent News
 
@@ -39,7 +37,7 @@ A vision-language-model-based framework for cross-domain bearing fault diagnosis
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![VSCode](<https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white>)
 
 ### 📫 Get in Touch
 
