@@ -37,13 +37,15 @@ I am particularly interested in three directions:
 
 ### VibAlign: Raw Physical Signal Tokens for LLMs
 
-[![VibAlign](assets/img/vibalign_overview.png)](projects/vibalign/)
+[![VibAlign](assets/img/vibalign_overview.png)](projects/vibalign.md)
 
 **VibAlign** learns language-aligned signal tokens from raw one-dimensional vibration and tactile signals, enabling LLM-based structured recognition and signal-conditioned reasoning for industrial diagnosis and robotic tactile perception.
 
 **Highlights:** raw physical-signal tokenization · signal-language alignment · robotic tactile sensing · BiMamba encoder · verbalizer-guided LLM adaptation
 
-[Project Page](projects/vibalign/) · [Paper](#) · [Code](#)
+**Status:** Manuscript in preparation / under review
+
+[Project Page](projects/vibalign.md) · Paper coming soon · Code coming soon
 
 ---
 
@@ -55,7 +57,7 @@ I am particularly interested in three directions:
 
 **Highlights:** domain generalization · VLM adaptation · STFT signal images · visual-side discriminative supervision
 
-[Project Page](projects/faultovis/) · [Paper](#) · [Code](#)
+[Project Page](projects/faultovis.md) · Paper coming soon · Code coming soon
 
 ---
 
@@ -63,11 +65,13 @@ I am particularly interested in three directions:
 
 [![VSLLaVA](assets/img/vsllava_overview.png)](projects/vsllava/)
 
-**VSLLaVA** formulates industrial vibration signal analysis as a multimodal question-answering task and adapts large multimodal models through expert-guided signal-question-answer instruction tuning and GRPO-based refinement.
+**VSLLaVA** adapts large multimodal foundation models to industrial vibration signal analysis by formulating signal understanding as an expert-guided multimodal question-answering task.
 
 **Highlights:** signal question answering · multimodal instruction tuning · VLM adaptation · GRPO refinement
 
-[Project Page](projects/vsllava/) · [Paper](https://arxiv.org/abs/2409.07482) · [Code](#)
+**Status:** Accepted by *Advanced Engineering Informatics* · Code publicly available
+
+[Project Page](projects/vsllava/) · [Paper](https://arxiv.org/abs/2409.07482) · [Code](https://github.com/ZXR-Rachel/VSLLaVA)
 
 ---
 
@@ -178,3 +182,5 @@ Honors: National Scholarship, Outstanding Graduate, Exemplary Student Award
 - CV: [Download My CV](assets/cv/cv-xinran-zhang.pdf)
 - Google Scholar: [Coming Soon](#)
 - LinkedIn: [Coming Soon](#)
+
+## ✒️ Last updated: 2026.07.08
