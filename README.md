@@ -201,4 +201,4 @@ I am organizing my research projects into visual project pages. Each page includ
 - Google Scholar: [Coming Soon](#)
 - LinkedIn: [Coming Soon](#)
 
-## ✒️ Last updated: 2026.07.08
+## ✒️ Last updated: 2026.07.10
