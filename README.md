@@ -51,7 +51,7 @@ I am particularly interested in three directions:
 
 ### FaultOvis: Domain-Generalized VLM for Industrial Fault Diagnosis
 
-[![FaultOvis](assets/img/faultovis_overview.png)](projects/faultovis/)
+[![FaultOvis](assets/img/faultovis/architecture.png)](projects/faultovis/)
 
 **FaultOvis** adapts a vision-language model to cross-domain bearing fault diagnosis by combining STFT-based signal images, diagnostic instruction tuning, auxiliary visual classification, and contrastive representation learning.
 
@@ -63,7 +63,7 @@ I am particularly interested in three directions:
 
 ### VSLLaVA: Multimodal Instruction Tuning for Vibration Signal Analysis
 
-[![VSLLaVA](assets/img/vsllava_overview.png)](projects/vsllava/)
+[![VSLLaVA](assets/img/vsllava/architecture.png)](projects/vsllava/)
 
 **VSLLaVA** adapts large multimodal foundation models to industrial vibration signal analysis by formulating signal understanding as an expert-guided multimodal question-answering task.
 
@@ -87,8 +87,8 @@ I am particularly interested in three directions:
 
 3. Qi Li†, **Xinran Zhang†**, et al.  
    **VSLLaVA: A Pipeline of Large Multimodal Foundation Model for Industrial Vibration Signal Analysis.**  
-   *Accepted by Advanced Engineering Informatics.*  
-   [arXiv](https://arxiv.org/abs/2409.07482)
+   *Advanced Engineering Informatics*, published online, 2026.  
+   [Final version via ScienceDirect Share Link](https://authors.elsevier.com/c/1nPDj5FA1kHH1t) *(free access until Aug. 27, 2026)* · [arXiv](https://arxiv.org/abs/2409.07482)
 
 † Equal contribution.
 
@@ -106,28 +106,26 @@ I am organizing my research projects into visual project pages. Each page includ
 
 ---
 
-## 🎓 Education
+## 🎓 Educations
 
 ### Tsinghua University  
 **M.S. in Mechanical Engineering**  
 Sept. 2024 – Jun. 2027 expected  
 GPA: **4.0 / 4.0**, Rank: **1 / 74**  
-Honor: University First-Class Scholarship
 
 ### Hunan University  
 **B.S. in Vehicle Engineering**  
 Sept. 2020 – Jun. 2024  
 GPA: **3.91 / 4.0**, Rank: **1 / 124** for three consecutive academic years  
-Honors: National Scholarship, Outstanding Graduate, Exemplary Student Award
 
 ---
 
-## 🏆 Awards & Teaching
+## 🏆 Awards & Social Activities
 
 ### Selected Awards
 
-- National Scholarship, 2021, 2022, 2023
 - University First-Class Scholarship, Tsinghua University, 2025
+- National Scholarship, 2021, 2022, 2023
 - Honorable Mention, Mathematical Contest in Modeling, 2023
 - National First Prize, National English Competition for College Students, 2023
 - National Third Prize, Chinese Mathematics Competition for College Students, 2023

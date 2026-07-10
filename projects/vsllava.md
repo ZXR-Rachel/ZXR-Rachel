@@ -74,39 +74,83 @@ GRPO is therefore used as a task-specific post-SFT refinement step. Its role is 
 
 ### Text-Only SQA Ablation
 
-To examine whether the improvement comes merely from exposure to signal-related QA text, VSLLaVA includes a text-only ablation using Qwen2.5 language models without signal images.
+To examine whether the improvement brought by VSLLaVA mainly comes from textual exposure or multimodal signal-question-answer alignment, we conducted a text-only ablation using Qwen2.5 language models without signal images.
 
-Text-only SFT improves language-level metrics, such as Word Recall and CIDEr, showing that the extracted QA text helps models learn signal-analysis terminology and answer styles. However, text-only models remain limited in signal-grounded reasoning because they cannot access the visual signal patterns. This confirms that the value of the SQA dataset lies not only in text exposure, but also in multimodal pairing between signal visualizations, expert questions, and diagnostic answers.
+| Model | Stage | Word Recall (%) | CIDEr | Mean Relative Error |
+|---|---|---:|---:|---:|
+| Qwen2.5-0.5B-Instruct | Base | 42.46 | 0.00 | 8.19 |
+| Qwen2.5-0.5B-Instruct | Text-only SFT | 58.00 | 2.17 | 2368.51 |
+| Qwen2.5-7B-Instruct | Base | 50.86 | 0.00 | 36.89 |
+| Qwen2.5-7B-Instruct | Text-only SFT | 56.19 | 2.62 | 72.66 |
+
+Text-only SFT improves language-level matching metrics. For Qwen2.5-0.5B-Instruct, Word Recall increases from 42.46% to 58.00%, and CIDEr increases from 0.00 to 2.17. For Qwen2.5-7B-Instruct, Word Recall increases from 50.86% to 56.19%, and CIDEr increases from 0.00 to 2.62.
+
+However, text-only models still remain limited in signal-grounded understanding because no signal image is provided. The large Mean Relative Error of Qwen2.5-0.5B-Instruct after text-only SFT also suggests that the model can learn answer templates and terminology but may still generate numerical values that are not grounded in the actual signal.
+
+Overall, this ablation confirms that the proposed SQA dataset is not merely a collection of signal-related texts. Its main value lies in the structured multimodal pairing of signal visualizations, expert questions, and diagnostic answers.
 
 ### Conventional Deep Learning Baselines
 
-VSLLaVA also compares with conventional task-specific deep learning baselines, including ViT and ResNet.
+VSLLaVA also compares with conventional task-specific deep learning baselines, including ViT and ResNet, to contextualize the proposed LMM-based pipeline against pre-LMM diagnostic models.
 
-These models achieve strong closed-set signal type classification performance, with Word Recall values around 91%. However, they require reformulating the SQA benchmark into separate classification and regression tasks, and they cannot directly answer arbitrary natural-language questions.
+Since ViT and ResNet cannot generate open-ended natural-language responses, the original SQA benchmark is reformulated into two task-specific settings: 12-class signal type classification and parameter regression.
 
-Therefore, the conventional DL baselines are interpreted as strong task-specific references rather than direct replacements for LMM-based interactive signal analysis.
+| Model | Setting | Word Recall (%) | Mean Relative Error | Num. Score |
+|---|---|---:|---:|---:|
+| ViT | Task-specific training | 91.07 | 127.62 | 0.55 |
+| ResNet | Task-specific training | 90.93 | 297.79 | 0.50 |
+
+The results show that conventional DL baselines perform strongly on the closed-set signal type classification sub-task. ViT and ResNet achieve Word Recall values of 91.07% and 90.93%, respectively, after task-specific training.
+
+However, these baselines require decomposing the SQA benchmark into separate classification and regression tasks. Their outputs are further converted into fixed answer templates for evaluation, so text-generation metrics such as BLEU, ROUGE, and CIDEr should not be interpreted as open-ended generation quality.
+
+Therefore, the conventional DL baselines are interpreted as strong task-specific references rather than direct replacements for VSLLaVA. In contrast, VSLLaVA operates through a unified multimodal question-answering interface.
 
 ### Vision-Encoder Co-Tuning
 
-An additional ablation examines whether co-tuning the vision encoder together with language-side LoRA further improves performance.
+An additional ablation examines whether co-tuning the vision encoder together with language-side LoRA can further improve vibration-signal understanding.
 
-The results show that vision-encoder co-tuning does not consistently outperform the main frozen-vision SQA-SFT setting under the current data scale and training budget. For example, Ovis2-8B with vision co-tuning obtains lower Word Recall and CIDEr than its frozen-vision SQA-SFT counterpart.
+In the main SQA-SFT setting, the vision encoder and visual-language alignment unit are frozen, and only language-side LoRA modules are trained. In this ablation, the vision encoder is also co-tuned during SQA-based fine-tuning.
 
-This suggests that directly adapting a natural-image-pretrained vision encoder with limited signal-oriented SQA data may introduce instability or overfitting. The main experiments therefore keep the vision encoder frozen for controlled, efficient, and comparable adaptation, while signal-specific visual pretraining remains an important future direction.
+| Model | Setting | Word Recall (%) | CIDEr | BLEU-4 |
+|---|---|---:|---:|---:|
+| Ovis2-8B | SQA-SFT + vision co-tuning | 78.56 | 4.98 | 0.64 |
+| Qwen2-VL-7B-Instruct | SQA-SFT + vision co-tuning | 70.44 | 4.36 | 0.57 |
+
+Compared with the frozen-vision SQA-SFT setting reported in the main evaluation, vision-encoder co-tuning does not consistently provide additional benefit. For example, Ovis2-8B with vision co-tuning achieves 78.56% Word Recall, 4.98 CIDEr, and 0.64 BLEU-4, which are lower than the corresponding frozen-vision SQA-SFT results.
+
+These results suggest that directly adapting a natural-image-pretrained vision encoder with limited signal-oriented SQA data may introduce instability or overfitting rather than consistently improving signal-language alignment.
+
+Therefore, VSLLaVA keeps the vision encoder and alignment unit frozen in the main experiments for controlled, efficient, and comparable adaptation across different VLM backbones. Signal-specific visual pretraining remains an important future direction.
 
 ### Real-Signal JNU Experiment
 
 To further examine real-signal robustness, VSLLaVA includes an additional experiment on the JNU bearing dataset using both raw waveform images and envelope-spectrum representations.
 
-The results show that envelope-spectrum representations provide useful diagnostic cues for some models, but they do not uniformly outperform raw waveform representations across all VLM backbones. Some settings also produce more recognizable predictions after envelope-spectrum fine-tuning, suggesting that fault-frequency-enhanced visualization can help reduce invalid or unmappable outputs.
+The JNU experiment contains four real bearing conditions: healthy, inner race defect, outer race defect, and roller element defect. For each signal segment, two visual representations are generated from the same 1-second window: the raw time-domain waveform and the envelope spectrum obtained through Hilbert envelope analysis.
 
-However, robust closed-set real-bearing-fault classification remains challenging for general-purpose VLMs. The JNU experiment highlights the need for stronger signal-specific visual representations, frequency-domain grounding, and more reliable real-signal adaptation.
+| Model | Setting | Macro Acc. (%) | Macro F1 (%) | Recognized / Unrecognized | Word Recall (%) |
+|---|---|---:|---:|---:|---:|
+| Ovis2-8B | Base | 76.25 | 12.50 | 43 / 57 | 41.49 |
+| Ovis2-8B | SQA-SFT w/ raw waveform | 68.75 | 9.52 | 65 / 35 | 63.22 |
+| Ovis2-8B | SQA-SFT w/ envelope spectrum | 60.63 | 19.52 | 99 / 1 | 55.17 |
+| Qwen2-VL-2B-Instruct | SQA-SFT w/ raw waveform | 67.50 | 16.40 | 80 / 20 | 73.36 |
+| Qwen2-VL-2B-Instruct | SQA-SFT w/ envelope spectrum | 70.63 | 17.31 | 81 / 19 | 85.18 |
+
+The results show that SQA-SFT improves real-signal response quality for several VLM backbones, but the benefit of envelope-spectrum visualization is model-dependent. For example, Qwen2-VL-2B-Instruct achieves higher Word Recall with envelope-spectrum fine-tuning than with raw-waveform fine-tuning, improving from 73.36% to 85.18%.
+
+Envelope-spectrum representations can also reduce invalid or unmappable predictions in some cases. For instance, Ovis2-8B produces 99 recognized predictions with envelope-spectrum fine-tuning, compared with 65 under raw-waveform fine-tuning and 43 under direct base-model inference.
+
+However, robust closed-set real-bearing-fault classification remains challenging for general-purpose VLMs. Some settings achieve relatively high macro accuracy, but their macro F1 scores remain low, indicating class bias, unmappable outputs, or insufficient discrimination among fault types.
+
+Overall, the JNU experiment shows that envelope analysis is a useful but not universally sufficient preprocessing strategy. Real bearing signals still require stronger signal-specific visual representations, more explicit frequency-domain grounding, and more reliable adaptation methods.
 
 ## Paper and Code
 
-- Paper: [arXiv](https://arxiv.org/abs/2409.07482)
+- Final published version: [ScienceDirect Share Link](https://authors.elsevier.com/c/1nPDj5FA1kHH1t) *(free access until Aug. 27, 2026)*
+- Preprint: [arXiv](https://arxiv.org/abs/2409.07482)
 - Code: [GitHub](https://github.com/ZXR-Rachel/VSLLaVA)
-- Status: Accepted by *Advanced Engineering Informatics*
+- Status: Published in *Advanced Engineering Informatics*
 
 ## Notes
 
