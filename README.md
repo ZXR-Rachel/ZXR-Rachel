@@ -106,17 +106,37 @@ I am organizing my research projects into visual project pages. Each page includ
 
 ---
 
-## 🎓 Educations
+## 🎓 Education
 
-### Tsinghua University  
-**M.S. in Mechanical Engineering**  
-Sept. 2024 – Jun. 2027 expected  
-GPA: **4.0 / 4.0**, Rank: **1 / 74**  
+<table>
+  <tr>
+    <td width="70">
+      <img src="assets/img/education/thu.png" width="55">
+    </td>
+    <td>
+      <strong>Tsinghua University</strong><br>
+      M.S. in Mechanical Engineering<br>
+      Sept. 2024 – Jun. 2027 expected<br>
+      GPA: <strong>4.0 / 4.0</strong>, Rank: <strong>1 / 74</strong>
+    </td>
+  </tr>
+</table>
 
-### Hunan University  
-**B.S. in Vehicle Engineering**  
-Sept. 2020 – Jun. 2024  
-GPA: **3.91 / 4.0**, Rank: **1 / 124** for three consecutive academic years  
+<br>
+
+<table>
+  <tr>
+    <td width="70">
+      <img src="assets/img/education/hnu.png" width="55">
+    </td>
+    <td>
+      <strong>Hunan University</strong><br>
+      B.S. in Vehicle Engineering<br>
+      Sept. 2020 – Jun. 2024<br>
+      GPA: <strong>3.91 / 4.0</strong>, Rank: <strong>1 / 124</strong> for three consecutive academic years
+    </td>
+  </tr>
+</table>
 
 ---
 
