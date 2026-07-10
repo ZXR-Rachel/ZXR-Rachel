@@ -111,7 +111,7 @@ I am organizing my research projects into visual project pages. Each page includ
 <table>
   <tr>
     <td width="70">
-      <img src="assets/img/education/thu.png" width="55">
+      <img src="assets/img/education/thu.png" width="100">
     </td>
     <td>
       <strong>Tsinghua University</strong><br>
@@ -127,7 +127,7 @@ I am organizing my research projects into visual project pages. Each page includ
 <table>
   <tr>
     <td width="70">
-      <img src="assets/img/education/hnu.png" width="55">
+      <img src="assets/img/education/hnu.png" width="100">
     </td>
     <td>
       <strong>Hunan University</strong><br>
