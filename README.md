@@ -101,8 +101,8 @@ I am organizing my research projects into visual project pages. Each page includ
 | Project | Topic | Page |
 |---|---|---|
 | VibAlign | Raw physical-signal tokenization for industrial and robotic systems | [View Project](projects/vibalign.md) |
-| FaultOvis | Domain-generalized VLM adaptation for bearing fault diagnosis | [View Project](projects/faultovis/) |
-| VSLLaVA | Multimodal instruction tuning for industrial vibration signal analysis | [View Project](projects/vsllava/) |
+| FaultOvis | Domain-generalized VLM adaptation for bearing fault diagnosis | [View Project](projects/faultovis.md) |
+| VSLLaVA | Multimodal instruction tuning for industrial vibration signal analysis | [View Project](projects/vsllava.md) |
 
 ---
 
@@ -201,4 +201,4 @@ I am organizing my research projects into visual project pages. Each page includ
 - Google Scholar: [Coming Soon](#)
 - LinkedIn: [Coming Soon](#)
 
-## ✒️ Last updated: 2026.07.10
+## ✒️ Last updated: 2026.07.12
