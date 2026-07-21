@@ -6,6 +6,49 @@ My research explores how non-text physical signals — such as **vibration, tact
 
 ---
 
+## 📰 Recent News
+
+- **2026.07:** VSLLaVA was published in *Advanced Engineering Informatics*.
+- **2026.05:** FaultOvis was submitted to *IEEE Transactions on Industrial Informatics*.
+- **2026.03:** I am preparing Ph.D. applications and developing my research portfolio on physical-signal foundation models.
+- **2024.05:** I was featured in a [Hunan University official media student profile](https://mp.weixin.qq.com/s/nxoHBo9KyyRW0MGVfkmg9Q) for my undergraduate academic journey. *(in Chinese)*
+
+---
+
+## 🎓 Education
+
+<table>
+  <tr>
+    <td width="70">
+      <img src="assets/img/education/thu.png" width="100">
+    </td>
+    <td>
+      <strong>Tsinghua University</strong><br>
+      M.S. in Mechanical Engineering<br>
+      Sept. 2024 – Jun. 2027 expected<br>
+      GPA: <strong>4.0 / 4.0</strong>, Rank: <strong>1 / 74</strong>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td width="70">
+      <img src="assets/img/education/hnu.png" width="100">
+    </td>
+    <td>
+      <strong>Hunan University</strong><br>
+      B.S. in Vehicle Engineering<br>
+      Sept. 2020 – Jun. 2024<br>
+      GPA: <strong>3.91 / 4.0</strong>, Rank: <strong>1 / 123 for three consecutive academic years</strong>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🔬 Research Vision
 
 Modern industrial and robotic systems continuously generate rich physical signals, including vibration, tactile, acoustic, force, and other sensor measurements. However, most existing foundation models are primarily designed for text, images, or videos, while physical signals remain underrepresented in the current multimodal AI landscape.
@@ -61,7 +104,7 @@ I am particularly interested in three directions:
 
 ---
 
-### VSLLaVA: Multimodal Instruction Tuning for Vibration Signal Analysis
+### VSLLaVA: Multimodal Instruction Tuning for Industrial Vibration Signal Analysis
 
 [![VSLLaVA](assets/img/vsllava/architecture.png)](projects/vsllava/)
 
@@ -69,28 +112,9 @@ I am particularly interested in three directions:
 
 **Highlights:** signal question answering · multimodal instruction tuning · VLM adaptation · GRPO refinement
 
-**Status:** Accepted by *Advanced Engineering Informatics* · Code publicly available
+**Status:** Published in *Advanced Engineering Informatics* · Code publicly available
 
-[Project Page](projects/vsllava/) · [Paper](https://arxiv.org/abs/2409.07482) · [Code](https://github.com/ZXR-Rachel/VSLLaVA)
-
----
-
-## 📚 Publications & Manuscripts
-
-1. **Xinran Zhang**, et al.  
-   **VibAlign: Learning Language-Aligned Signal Tokens for Vibration Signal Analysis with Large Language Models.**  
-   *Submitted to Mechanical Systems and Signal Processing.*
-
-2. **Xinran Zhang**, Jinfeng Huang, et al.  
-   **FaultOvis: A Domain-Generalized Vision-Language Model for Rolling Bearing Fault Diagnosis.**  
-   *Submitted to IEEE Transactions on Industrial Informatics.*
-
-3. Qi Li†, **Xinran Zhang†**, et al.  
-   **VSLLaVA: A Pipeline of Large Multimodal Foundation Model for Industrial Vibration Signal Analysis.**  
-   *Advanced Engineering Informatics*, published online, 2026.  
-   [Final version via ScienceDirect Share Link](https://authors.elsevier.com/c/1nPDj5FA1kHH1t) *(free access until Aug. 27, 2026)* · [arXiv](https://arxiv.org/abs/2409.07482)
-
-† Equal contribution.
+[Project Page](projects/vsllava/) · [Published Paper](https://www.sciencedirect.com/science/article/pii/S1474034626007159) · [Preprint](https://arxiv.org/abs/2409.07482) · [Code](https://github.com/ZXR-Rachel/VSLLaVA)
 
 ---
 
@@ -106,37 +130,22 @@ I am organizing my research projects into visual project pages. Each page includ
 
 ---
 
-## 🎓 Education
+## 📚 Publications & Manuscripts
 
-<table>
-  <tr>
-    <td width="70">
-      <img src="assets/img/education/thu.png" width="100">
-    </td>
-    <td>
-      <strong>Tsinghua University</strong><br>
-      M.S. in Mechanical Engineering<br>
-      Sept. 2024 – Jun. 2027 expected<br>
-      GPA: <strong>4.0 / 4.0</strong>, Rank: <strong>1 / 74</strong>
-    </td>
-  </tr>
-</table>
+1. **Xinran Zhang**, et al.  
+   **VibAlign: Learning Language-Aligned Signal Tokens for Vibration Signal Analysis with Large Language Models.**  
+   *Submitted to Mechanical Systems and Signal Processing.*
 
-<br>
+2. **Xinran Zhang**, Jinfeng Huang, et al.  
+   **FaultOvis: A Domain-Generalized Vision-Language Model for Rolling Bearing Fault Diagnosis.**  
+   *Submitted to IEEE Transactions on Industrial Informatics.*
 
-<table>
-  <tr>
-    <td width="70">
-      <img src="assets/img/education/hnu.png" width="100">
-    </td>
-    <td>
-      <strong>Hunan University</strong><br>
-      B.S. in Vehicle Engineering<br>
-      Sept. 2020 – Jun. 2024<br>
-      GPA: <strong>3.91 / 4.0</strong>, Rank: <strong>1 / 124</strong> for three consecutive academic years
-    </td>
-  </tr>
-</table>
+3. Qi Li†, **Xinran Zhang†**, et al.  
+   **VSLLaVA: A Pipeline of Large Multimodal Foundation Model for Industrial Vibration Signal Analysis.**  
+   *Advanced Engineering Informatics*, 2026, 76: 105023.  
+   [Published Paper](https://www.sciencedirect.com/science/article/pii/S1474034626007159) · [arXiv](https://arxiv.org/abs/2409.07482) · [Code](https://github.com/ZXR-Rachel/VSLLaVA)
+
+† Equal contribution.
 
 ---
 
@@ -184,15 +193,6 @@ I am organizing my research projects into visual project pages. Each page includ
 
 ---
 
-## 📰 Recent News
-
-- **2026:** VSLLaVA was accepted by *Advanced Engineering Informatics*.
-- **2026:** FaultOvis was submitted to *IEEE Transactions on Industrial Informatics*.
-- **2026:** VibAlign was submitted to *Mechanical Systems and Signal Processing*.
-- **2026:** I am preparing Ph.D. applications and developing my research portfolio on physical-signal foundation models.
-
----
-
 ## 📫 Get in Touch
 
 - Email: [xinran-z24@mails.tsinghua.edu.cn](mailto:xinran-z24@mails.tsinghua.edu.cn)
@@ -201,4 +201,4 @@ I am organizing my research projects into visual project pages. Each page includ
 - Google Scholar: [Coming Soon](#)
 - LinkedIn: [Coming Soon](#)
 
-## ✒️ Last updated: 2026.07.12
+## ✒️ Last updated: 2026.07.21

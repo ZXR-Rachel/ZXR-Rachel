@@ -147,9 +147,10 @@ Overall, the JNU experiment shows that envelope analysis is a useful but not uni
 
 ## Paper and Code
 
-- Final published version: [ScienceDirect Share Link](https://authors.elsevier.com/c/1nPDj5FA1kHH1t) *(free access until Aug. 27, 2026)*
+- Published paper: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1474034626007159)
 - Preprint: [arXiv](https://arxiv.org/abs/2409.07482)
 - Code: [GitHub](https://github.com/ZXR-Rachel/VSLLaVA)
+- Citation: Li Q, Zhang X, Huang J, et al. VSLLaVA: A pipeline for Large Multimodal Foundation Models in industrial vibration signal analysis. *Advanced Engineering Informatics*, 2026, 76: 105023.
 - Status: Published in *Advanced Engineering Informatics*
 
 ## Notes
